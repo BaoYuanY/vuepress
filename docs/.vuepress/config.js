@@ -4,9 +4,9 @@ module.exports = {
     themeConfig: {
         logo: '/tx.png',
         nav: [
-            { text: 'Home', link: '/' },
-            { text: 'Guide', link: '/guide/' },
-            { text: 'External', link: 'https://google.com' },
+            //{ text: 'Home', link: '/' },
+            //{ text: 'Guide', link: '/guide/' },
+            { text: '联系', link: 'https://t.me/BaoYuanY' },
         ],
         //search: true,
         //searchMaxSuggestions: 10,
