@@ -8,7 +8,7 @@ module.exports = {
             //{ text: 'Guide', link: '/guide/' },
             { text: '联系', link: 'https://t.me/BaoYuanY' },
         ],
-        //search: true,
+        search: true,
         //searchMaxSuggestions: 10,
         algolia: {
             apiKey: '4819e020eca64964cfb4072be1e0f284',
