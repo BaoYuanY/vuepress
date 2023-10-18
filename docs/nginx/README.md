@@ -188,6 +188,12 @@ I/O在计算机中指Input/Output， IOPS (Input/Output Per Second)即每秒的�
 
 ### 1.4.3 IO多路复用型（IO multiplexing）
 
+IO multiplexing 就是我们所说的select，poll，epoll，有些地方也称这种IO方式为 event driven IO。
+select/poll/epoll的好处就在于单个process就可以同时处理多个网络连接的IO。它的基本原理就是select，poll，epoll这个function会不断的轮询所负责的socket，当某个socket有数据到达了，就通知用户进程。当用户进程调用了select，那么整个进程就会被block，而同时，kernel会“监视”所有select负责的socket，当任何一个socket中的数据准备好了，select就会返回。这个时候用户进程再调用read操作，将数据从kernel拷贝到用户进程。
+
+> Apache prefork是此模式的主进程+多进程/单线程+select，work是主进程+多进程/多线程+poll模式
+
+
 
 
 
