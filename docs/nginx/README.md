@@ -193,7 +193,7 @@ select/poll/epoll的好处就在于单个process就可以同时处理多个网�
 
 > Apache prefork是此模式的主进程+多进程/单线程+select，work是主进程+多进程/多线程+poll模式
 
-
+![img.png](/image/multiplexing-io.png)
 
 
 
